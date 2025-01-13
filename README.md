@@ -4,17 +4,19 @@
 
 <h2 align="center"> LlamaV-o1: Rethinking Step-By-Step Visual Reasoning in LLMs</h2>
 
+![](https://i.imgur.com/waxVImv.png)
+
+[Omkar Thawakar](https://omkarthawakar.github.io/)* , [Dinura Dissanayake](https://github.com/mbzuai-oryx/LlamaV-o1)* , [Ketan More](https://github.com/mbzuai-oryx/LlamaV-o1)* , [Ritesh Thawkar](https://github.com/mbzuai-oryx/LlamaV-o1)* , [Ahmed Heakl](https://scholar.google.com/citations?user=JcWO9OUAAAAJ&hl=en)* , [Noor Ahsan](https://github.com/mbzuai-oryx/LlamaV-o1)* , [Yuhao Li](https://github.com/mbzuai-oryx/LlamaV-o1)* , [Mohammed Zumri](https://github.com/mbzuai-oryx/LlamaV-o1)* , [Jean Lahoud](https://scholar.google.com/citations?user=LsivLPoAAAAJ&hl=en)*, [Rao Muhammad Anwer](https://scholar.google.com/citations?hl=en&authuser=1&user=_KlvMVoAAAAJ), [Hisham Cholakkal](https://scholar.google.com/citations?hl=en&user=bZ3YBRcAAAAJ), [Ivan Laptev](https://scholar.google.com/citations?user=qQP6WXIAAAAJ&hl=en), [Ivan Laptev](https://mbzuai.ac.ae/study/faculty/ivan-laptev/), [Mubarak Shah](https://www.cs.ucf.edu/person/mubarak-shah/), [Fahad Shahbaz Khan](https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en) and [Salman Khan](https://salman-h-khan.github.io/) 
+
+*Equal Contribution
+
+**Mohamed bin Zayed University of Artificial Intelligence, UAE**
+
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
-
-<!-- <div style="display: flex; align-items: center; justify-content: center;">
-  <img src="figures/logo2.png" width="80px" style="margin-right: 10px;">
-  <h2>LlamaV-o1: Rethinking Step-By-Step Visual Reasoning in LLMs</h2>
-</div> -->
-
 ## 📣 Latest Updates
-
-- **Junuary-13-2025**: *Arxiv release. Our VCR-Bench is available at: [HuggingFace](https://huggingface.co/datasets/omkarthawakar/VRC-Bench). Model Checkpoint: [HuggingFace](https://huggingface.co/omkarthawakar/LlamaV-o1). Code is available at: [GitHub](https://github.com/mbzuai-oryx/LlamaV-o1/).🤗
+- **Junuary-13-2025**: Technical Report of LlamaV-o1 is released on Arxiv. [Paper](https://arxiv.org/list/cs.CV/recent)
+- **Junuary-10-2025**: *Code, Model & Dataset release. Our VCR-Bench is available at: [HuggingFace](https://huggingface.co/datasets/omkarthawakar/VRC-Bench). Model Checkpoint: [HuggingFace](https://huggingface.co/omkarthawakar/LlamaV-o1). Code is available at: [GitHub](https://github.com/mbzuai-oryx/LlamaV-o1/).🤗
 --- 
 
 ## 🔥 Highlights
