@@ -48,7 +48,7 @@ across six benchmarks while being 5× faster, compared to the recent Llava-CoT.
 <div align=center>
 <img src="figures/dataset_overview.png" width="900px">
 </div>
-The figure presents our benchmark structure and the comparative performance of LMMs on ReasoningChain-Bench. The dataset spans diverse domains, including mathematical, logical, and scientific reasoning, visual perception, and specialized areas such as medical imaging, cultural understanding, and document OCR. It also includes tasks like chart and diagram comprehension to test real-world applications. The bar chart compares various state-of-the-art models, showcasing final answer accuracy and step-by-step reasoning performance. Our LlamaV-o1 model surpasses GPT-4o-mini, Gemini-1.5-Flash, and Llava-CoT in complex multimodal reasoning tasks, achieving superior accuracy and logical coherence.
+The figure presents our benchmark structure and the comparative performance of LMMs on VRC-Bench. The dataset spans diverse domains, including mathematical & logical reasoning, scientific reasoning, visual perception, and specialized areas such as medical imaging, cultural understanding, and document OCR. It also includes tasks like chart & diagram comprehension to test real-world applications. The bar chart compares various state-of-the-art models, showcasing final answer accuracy and step-by-step reasoning performance. Our LlamaV-o1 model surpasses GPT-4o-mini, Gemini-1.5-Flash, and Llava-CoT in complex multimodal reasoning tasks, achieving superior accuracy and logical coherence.
 
 ## Dataset Examples
 <div align=center>
@@ -100,7 +100,7 @@ You can download the pretrained weights of **LlamaV-o1** from the Huggingface: [
 
 ### Dataset 📚
 
-You can download the **VCR-Bench** from the Huggingface: [omkarthawakar/VRC-Bench](https://huggingface.co/datasets/omkarthawakar/VRC-Bench).
+You can download the **VRC-Bench** from the Huggingface: [omkarthawakar/VRC-Bench](https://huggingface.co/datasets/omkarthawakar/VRC-Bench).
 
 
 ### Inference 🏃
