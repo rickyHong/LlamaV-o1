@@ -8,7 +8,7 @@ import json
 import ast
 import pandas as pd
 
-openai_api_key = ""
+openai_api_key = "<add openai API key>"
 client = OpenAI(
     api_key=openai_api_key  
 )
@@ -231,7 +231,7 @@ import pandas as pd
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor
 
-result_file = "results_llavao1_pixmo_mt_bs4_beams_8_v2.json"
+result_file = "path/to/result_file"
 print("Using : {}".format(result_file))
 print("="*50)
 

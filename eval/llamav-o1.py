@@ -12,8 +12,7 @@ model = MllamaForConditionalGeneration.from_pretrained(
 )
 processor = AutoProcessor.from_pretrained(model_id)
 
-url = "https://datasets-server.huggingface.co/assets/VIM-Bench/VIM-MathVista/--/d6ba926dc6b088c3fc7241f1d0155aa1ec9fbe2f/--/default/vim_mathvista_testmini/12/decoded_image/image.png?Expires=1734560868&Signature=bdSm11mQAW3GMBxY7lEv5cobNeRd6lV4bW42ueD6VN~Hi--s-NhmnA3D7GT6vfhDvYsnDykHKFA07EI7JHgYo-jB1O9BI2xEicoxpACShVfrklV9XtQZaNVEUi0pBwOgWSJmj4OmjeqZKRe6-NBPvWRDcB0HJ0jmN1-~CaRO2BACJqlqjzckJ6mMkSYqnyHNp3OFfXWN-uRrTWLw6FttonQyj~~dqKy1bA9CxDQuL3lE3DuSf1dqc7O1ZqgiRjyA~rRiJc-3XqlaBwbDqU9zj9~WU02WN0epaty3lq4vX-zQwR3Qd2pXj5WuY3XiBcRiP60iNFUAijjOBeQCyJ7g0w__&Key-Pair-Id=K3EI6M078Z3AC3"
-image = Image.open(requests.get(url, stream=True).raw)
+image = Image.open("../MathVista_74.png")
 
 
 def generate_inner(question, image):
@@ -29,7 +28,7 @@ def generate_inner(question, image):
             128009
         ],
         "temperature": 0.1,
-        "num_beams": 8
+        "num_beams": 1
 
     }
     messages = [
@@ -37,7 +36,7 @@ def generate_inner(question, image):
             'role': 'user', 
             'content': [
                 {'type': 'image'},
-                {'type': 'text', 'text': question+"\nPlease generate a summary of the picture."}
+                {'type': 'text', 'text': question+"\nSummarize how you will approach the problem and explain the steps you will take to reach the answer."}
             ],
         }
     ]
@@ -64,13 +63,13 @@ def generate_inner(question, image):
             }
         ]
     out = infer(messages)
-    caption_prompt = "Please generate a detailed caption for the image"
+    caption_prompt = "Provide a detailed description of the image, particularly emphasizing the aspects related to the question."
     messages.extend(tmp(out, caption_prompt))
     out = infer(messages)
-    reasoning_prompt = "Please generate a detailed reasoning to answer the question given the caption."
+    reasoning_prompt = "Provide a chain-of-thought, logical explanation of the problem. This should outline step-by-step reasoning."
     messages.extend(tmp(out, reasoning_prompt))
     reasoning = infer(messages)
-    conclusion_prompt = "Please generate the final answer. Do not output anything else."
+    conclusion_prompt = "State the final answer in a clear and direct format. It must match the correct answer exactly."
     messages.extend(tmp(reasoning, conclusion_prompt))
     out = infer(messages)
     return out, reasoning    
