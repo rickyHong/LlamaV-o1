@@ -130,7 +130,7 @@ More details about finetuning will be available soon!
 
 
 ### Reproduce the Results
-To reproduce our results on VRC-Bench:
+**To reproduce our results on VRC-Bench:**
 
 Please run following.
 ```
@@ -140,6 +140,21 @@ python eval/get_result.py
 
 Please make sure to put correct name/path of generated json and ChatGPT API key in eval/get_result.py 
 
+**To reproduce our results on SIX Benchmark Datasets:**
+
+We used VLMEvalKit to evaluate LlamaV-o1 on six benchmark datasets. 
+
+replace the file [vlmeval/vlm/llama_vision](https://github.com/open-compass/VLMEvalKit/blob/main/vlmeval/vlm/llama_vision.py) with [eval/llama_vision.py](https://github.com/mbzuai-oryx/LlamaV-o1/blob/main/eval/llama_vision.py)
+
+Add following line to llama_series model of [vlmeval/config.py](https://github.com/open-compass/VLMEvalKit/blob/main/vlmeval/config.py) file.
+```
+'LlamaV-o1': partial(llama_vision, model_path='omkarthawakar/LlamaV-o1'),
+```
+
+Run the following commamd 
+```
+torchrun --nproc-per-node=8 run.py --data MMStar AI2D_TEST HallusionBench MMBench_DEV_EN MMVet MathVista_MINI --model LlamaV-o1 --work-dir LlamaV-o1 --verbose
+```
 
 ## 📝 Citation
 
