@@ -129,6 +129,17 @@ We used [llama-recipes](https://github.com/Meta-Llama/llama-recipes) to finetune
 More details about finetuning will be available soon!
 
 
+### Reproduce the Results
+To reproduce our results on VRC-Bench:
+
+Please run following.
+```
+python eval/inference.py 
+python eval/get_result.py
+```
+
+Please make sure to put correct name/path of generated json and ChatGPT API key in eval/get_result.py 
+
 
 ## 📝 Citation
 
